@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html >
+<html lang="en">
+<head>
+    <title>Accessible Forms</title>
+
+	<style>
+		body { 
+			font-family: verdana; 
+		}
+		
+		form {
+			width: 50%;
+			background-color: lightblue;
+			margin-bottom: 30px;
+			padding: 10px;
+		}
+		
+		div.inputpanel {
+			margin: 5px 0px;
+		}
+
+		label {
+			width: 130px;
+			float: left;
+		}
+		
+		input[required] {
+			background-color: rgb(255, 255, 0);
+		}
+		
+		button {
+			background-color: steelblue;
+			color: white;
+			font-weight: bold;
+			width: 70px;
+			height: 30px;
+			margin-left: 5px;
+		}
+		
+	</style>
+
+</head>
+<body>
+	<h1>Accessible forms example</h1>
+
+	<!-- Demonstrate the aria-describedby and aria-labelledby attribute -->
+	<form id="form1" action="">
+	
+		<div class="inputpanel">
+			<label for="fromText">From aiport: </label>	
+			<input id="fromText" type="text" size="25" aria-describedby="fromDescriptor">
+			<span  id="fromDescriptor">The airport you're travelling from</span>
+		</div>
+
+		<div class="inputpanel">
+			<label for="toText">To airport: </label>	
+			<input id="toText" type="text" size="25" aria-describedby="toDescriptor">
+			<span  id="toDescriptor">The airport you're travelling to</span>
+		</div>
+
+		<div class="inputpanel">
+			<label id="rangeLabel" for="rangeText">Travel within</label>	
+			<input id="rangeText" type="text" size="2" aria-labelledby="rangeLabel rangeText rangeUnit">
+			<span  id="rangeUnit">days</span>
+		</div>
+
+		<button>Submit</button> 
+
+	</form>
+
+</body>
+</html>

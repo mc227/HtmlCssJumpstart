@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Link Pseudo-Classes</title>
+
+		<style>
+		
+			body {
+				font-family: tahoma;
+			}
+			
+			/* General styles for all hyperlinks */
+			a { 
+				text-decoration: none;
+				padding: 10px;
+			}                               
+			
+			a:link    { color: #326da8; }                              /* Unvisited hyperlink  */
+			a:visited { color: purple; }                               /* Visited hyperlink    */
+			a:hover   { background-color: #326da8; color: white; }     /* Mouse-over hyperlink */
+			a:active  { background-color: #326da8; color: orange; }    /* Selected hyperlink   */
+		
+		</style>
+		
+	</head>
+
+	<body>
+
+		<p>
+			<a href="https://en.wikipedia.org">Wiki</a> 
+		</p>
+		
+		<p>
+			<a href="https://www.google.com/maps">Google Maps</a>
+		</p>
+
+		<p>
+			<a href="https://www.oreilly.com/">O'Reilly</a>
+		</p>
+
+		<p>
+			<a href="https://www.bbc.co.uk/">BBC</a>
+		</p>
+
+	</body>
+</html>

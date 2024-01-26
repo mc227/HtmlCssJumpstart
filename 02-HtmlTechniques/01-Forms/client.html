@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<title>Forms - Client</title>
+
+	<style>
+		body {
+			font-family: verdana;
+		}
+		
+		form div {
+			margin-bottom: 10px;
+		}
+
+		label.mainlabel {
+			float: left;
+			width: 10em;
+		}
+		
+	</style>
+
+</head>
+<body>
+
+	<h1>Forms - Client</h1>
+	
+	<form action="http://localhost:5000/employees" method="post" target="_blank">
+
+		<div class="inputpanel">
+			<label class="mainlabel" for="fullname">Full name:</label>
+			<input type="text" name="fullname" id="fullname" size="25">
+		</div>
+
+		<div class="inputpanel">
+			<label class="mainlabel" for="password">Password:</label>
+			<input type="password" name="password" id="password" size="25">
+		</div>
+
+		<div class="inputpanel">
+			<label class="mainlabel" for="bio">Bio:</label>
+			<textarea name="bio" id="bio" rows="4" cols="26"></textarea>
+		</div>
+
+		<div class="inputpanel">
+			<label class="mainlabel" for="salaried">Salaried?</label>
+			<input type="checkbox" name="salaried" value="yes" id="salaried" checked>
+		</div>
+
+		<div class="inputpanel">
+			<label class="mainlabel">Employment type:</label>
+
+			<input type="radio" name="emptype" id="emptype1" value="1">
+			<label for="emptype1">Full-time</label>
+			
+			<input type="radio" name="emptype" id="emptype2" value="2">
+			<label for="emptype2">Part-time</label>
+			
+			<input type="radio" name="emptype" id="emptype3" value="3">
+			<label for="emptype3">Contractor</label>
+		</div>
+
+		<div class="inputpanel">
+			<label class="mainlabel" for="slanguages">Languages:</label>
+			<select name="languages" multiple size="5">
+				<option value="1">English</option>
+				<option value="2">Mandarin Chinese</option>
+				<option value="3">Hindi</option>
+				<option value="4">Spanish</option>
+				<option value="5">French</option>
+				<option value="6">Arabic</option>
+				<option value="7">Bengali</option>
+				<option value="8">Russian</option>
+			</select>
+		</div>
+
+		<input type="submit" value="Submit form">
+		<input type="reset" value="Reset form">
+
+	</form>
+		
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Miscellaneous Additional Tags</title>
+    
+    <style>
+        body {
+            font-family: verdana;
+        }
+        
+        time {
+            color: red;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        #messageArea {
+            background-color: steelblue;
+            color: white;
+            width: 100%;
+            padding: 10px 2px;
+        }
+            
+    </style>
+    
+    <script>
+        function onload() {
+            for (var timeElem of document.querySelectorAll("time")) {
+                timeElem.onmouseover = function(e) {
+                    document.getElementById("messageArea").innerHTML = e.target.innerHTML + ": " + e.target.getAttribute("datetime");
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="onload()">
+
+    <h4>Hover over a red &lt;time&gt; element, to see date/time and message</h4>
+    <time datetime="1964-12-03">Got born</time>
+    <time datetime="1990-08-11">Got married</time>
+    <time datetime="1997-07-02T01:05:30+0100">Daugher born</time>
+    <time datetime="1997-07-02T01:20:00+0100">Son born</time>
+
+    <p id="messageArea"></p>
+
+    <p>Also note my prediction, <mark>Wales</mark> will win the FIFA World Cup in 2022 <small>[and probably 2026 as well!]</small></p>
+
+</body>
+</html>

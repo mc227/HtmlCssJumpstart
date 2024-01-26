@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inner Display Type - List Item</title>
+		
+		<style>
+			body {
+				font-family: tahoma;
+			}
+
+			#wrapper {
+				padding: 20px;
+			}
+
+			#wrapper > * {
+				display: list-item;
+                list-style-position: outside;	/* inside, outside */
+				list-style-type: lower-greek;	/* (similar to list-style) */
+				background-color: orange;
+		    }
+
+		</style>
+    </head>
+
+    <body>
+
+		<div id="wrapper">
+			<div id="div1">div1</div>
+			<div id="div2">div2</div>
+			<div id="div3">div3</div>
+			<div id="div4">div4</div>
+			<div id="div5">div5</div>
+			<div id="div6">div6</div>
+		</div>	
+    </body>
+</html>

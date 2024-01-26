@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Row Span and Column Span</title>
+
+        <style>
+            body {
+                font-family: Verdana;
+            }
+
+            table {
+                width: 33%;
+                background-color: lightgrey;
+                border-spacing: 0px;
+            }
+
+            caption {
+                font-weight: bold;
+                margin-bottom: 5px;
+                color: white;
+                background-color: #2e446e;
+                padding: 0.33em 0em;
+            }
+
+            thead, tfoot {
+                background-color: #85a1ff;
+            }
+
+            th {
+                text-align: left;  /* Default text-align for th elements is "center" */
+            }
+
+            thead th {  /* Styles for th in a thead */
+                color: #700202;
+                background-color: #85a1ff;
+            }
+
+            tbody th {  /* Styles for th in a tbody */
+                color: black;
+                background-color: white;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Row Span and Column Span</h1>
+        <table>
+            <caption>Shopping Cart</caption>
+            <thead>
+                <tr>
+                    <th rowspan="2">Item</th><th>Net Price</th><th>Sales Tax</th><th>Total Price</th>
+                </tr>
+                <tr>
+                    <th>GBP</th><th>GBP</th><th>GBP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th colspan="4">Andy</th>
+                </tr>
+                <tr>
+                    <td>Carving skis</td><td>500</td><td>100</td><td>600</td>
+                </tr>
+                <tr>
+                    <td>Helmet</td><td>50</td><td>10</td><td>60</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th colspan="4">Emily</th>
+                </tr>
+                <tr>
+                    <td>Carving skis</td><td>500</td><td>100</td><td>600</td>
+                </tr>
+                <tr>
+                    <td>Ski boots</td><td>200</td><td>40</td><td>240</td>
+                </tr>
+                <tr>
+                    <td>Helmet</td><td>50</td><td>10</td><td>60</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th colspan="4">Tom</th>
+                </tr>
+                <tr>
+                    <td>Carving skis</td><td>500</td><td>100</td><td>600</td>
+                </tr>
+                <tr>
+                    <td>Ski boots</td><td>200</td><td>40</td><td>240</td>
+                </tr>
+                <tr>
+                    <td>Helmet</td><td>50</td><td>10</td><td>60</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Totals</td><td>2050</td><td>410</td><td>2460</td>
+                </tr>
+            </tfoot>
+    </body>
+</html>

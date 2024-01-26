@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Of-Type Pseudo-Elements</title>
+
+		<style>
+			
+			body {
+				font-family: tahoma;
+			}
+
+			p:first-of-type {
+				color: red;
+			}	 
+			
+			p:last-of-type {
+				color: purple;
+			}	 
+
+			p:nth-of-type(2) {
+				color: orange;
+			}	 
+
+			p:nth-last-of-type(2) {
+				color: blue;
+			}	 
+			
+			p:only-of-type {
+				background-color: pink;
+				color: green;
+			}	 		
+
+			/* Note that the "child" pseudo-elements would not work as desired in this example */
+			/*
+			p:first-child {
+				color: red;
+			}	 
+			
+			p:last-child {
+				color: purple;
+			}	 
+
+			p:nth-child(2) {
+				color: orange;
+			}	 
+
+			p:nth-last-child(2) {
+				color: blue;
+			}	 
+			
+			p:only-child {
+				background-color: pink;
+				color: green;
+			}	 
+			*/
+			
+		</style>
+		
+	</head>
+
+	<body>
+
+		<div>
+			<h1>Heading A</h1>
+			<p>Paragraph 1</p>
+			<p>Paragraph 2</p>
+			<p>Paragraph 3</p>
+			<p>Paragraph 4</p>
+			<p>Paragraph 5</p>
+		</div>
+		
+		<div>
+			<h1>Heading B</h1>
+			<p>Only paragraph</p>
+		</div>
+
+	</body>
+</html>

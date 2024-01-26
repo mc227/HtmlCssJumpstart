@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Text Decoration</title>
+		
+		<style>
+			body {
+				font-family: tahoma;
+				font-size: 2em;
+			}
+			
+			div {
+			    margin-bottom: 1em;
+			}
+			
+		    #div1 {
+			    text-decoration: overline dashed red;
+			}
+			
+		    #div2 {
+			    text-decoration-line: line-through; 
+				text-decoration-style: wavy;
+				text-decoration-color: orange;
+				text-decoration-thickness: 2px;
+			}
+
+		    #div3 {
+			    text-decoration-line: overline underline; 
+				text-decoration-style: dotted;
+				text-decoration-color: green;
+				text-decoration-thickness: 2px;
+			}
+			
+			a {
+				text-decoration-line: none;
+			}
+		</style>
+    </head>
+
+    <body>
+		<div id="div1">This is div1</div>
+		<div id="div2">This is div2</div>
+		<div id="div3">This is div3</div>
+		<div id="div4">This is div4 with a <a href="https://oreilly.com">link</a></div>
+    </body>
+</html>

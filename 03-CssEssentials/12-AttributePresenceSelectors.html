@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Attribute Presence Selectors</title>
+
+		<style>
+
+			body {
+				font-family: tahoma;
+			}
+
+			/* Applies to bookmarks */
+			a[name] {          
+				color: blue;
+			}
+
+			/* Applies to hyperlinks */
+			a[href] {          
+			  color: orange;
+			}
+
+		</style>
+		
+	</head>
+
+	<body>
+
+		<p>
+			<a name="bookmark1">Here is some text with a bookmark.</a>
+		</p>
+	
+		<p>
+			<a href="https://www.bbc.co.uk/">BBC link</a>
+		</p>
+
+		<p>
+			<a name="bookmark2">Here is some more text with a bookmark.</a>
+		</p>
+
+		<p>
+			<a href="https://www.oreilly.com/">O'Reilly link</a>
+		</p>
+
+	</body>
+</html>

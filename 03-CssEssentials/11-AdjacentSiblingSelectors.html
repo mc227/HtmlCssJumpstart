@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Adjacent Sibling Selectors</title>
+
+		<style>
+
+			body {
+				font-family: tahoma;
+			}
+
+			/* This rule applies for the <div> that is the adjacent sibling of an <h1> element */
+			h1 + div {
+				font-weight: bold;
+			}
+			
+		</style>
+		
+	</head>
+
+	<body>
+
+	<h1>Here's an h1 heading</h1>
+	<div>This is the first div after an h1 element. It's in bold.</div>
+	<div>This is another div after an h1 element. It's not in bold.</div>
+	<div>This is yet another div after an h1 element. It's not in bold either.</div>
+	
+	<h1>Here's another h1 heading</h1>
+	<div>This is the first div after an h1 element. It's in bold.</div>
+	<div>This is another div after an h1 element. It's not in bold.</div>
+	<div>This is yet another div after an h1 element. It's not in bold either.</div>
+
+	</body>
+</html>

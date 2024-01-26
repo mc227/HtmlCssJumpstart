@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Attribute Presence Selectors</title>
+
+		<style>
+
+			body {
+				font-family: tahoma;
+			}
+			
+			img {
+				width: 100px;
+				border: solid 10px black;
+			}
+		
+			/* Test equality */
+			img[src="euroImages/Wales.png"] {
+				border: solid 10px orange;
+			}
+
+			/* Test starts with */
+			img[src^="nonEuroImages/"] {
+				border: solid 10px blue;
+			}
+
+			/* Test ends with */
+			img[src$="n.png"] {
+				border: solid 10px red;
+			}
+
+			/* Test contains */
+			img[src*="Nor"] {
+				border: solid 10px green;
+			}
+
+		</style>
+		
+	</head>
+
+	<body>
+
+		<p>
+			<img src="euroImages/Wales.png" alt="Wales">
+		</p>
+		
+		<p>
+			<img src="euroImages/Norway.png" alt="Norway">
+			<img src="euroImages/Sweden.png" alt="Sweden">
+			<img src="euroImages/Spain.png"  alt="Spain">
+			<img src="euroImages/Greece.png" alt="Greece">
+		</p>
+
+		<p>
+			<img src="nonEuroImages/USA.png" alt="USA">
+			<img src="nonEuroImages/China.png" alt="China">
+			<img src="nonEuroImages/India.png" alt="India">
+			<img src="nonEuroImages/Brazil.png" alt="Brazil">
+		</p>
+
+	</body>
+</html>

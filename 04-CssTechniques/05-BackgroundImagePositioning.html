@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Background Image Position</title>
+		
+		<style>
+			/* 
+			 * background-position tells the browser the position of an image within an element.
+			 * Specify lengths, percentages, or keywords
+			 * See https://developer.mozilla.org/en-US/docs/Web/CSS/background-position
+			 */
+			 
+			body {
+				font-family: tahoma;
+				background-image: url("Wales.png");
+               	background-repeat: no-repeat;			
+				background-position: right bottom;
+			}
+			
+			div {
+			    margin-bottom: 10em;
+			}
+			
+		    #div1 {
+			    background-color: #fc7276
+			}
+			
+		    #div2 {
+			    background-color: rgb(252,186,3)
+			}
+			
+			#div3 {
+			    background-color: lightgreen
+			}
+			
+		</style>
+    </head>
+
+    <body>
+		<div id="div1">
+			This is div1.<br>
+			It contains some text.<br>
+		</div>
+		
+		<div id="div2">
+			This is div2.<br/>
+			It contains some text.<br>
+		</div>
+
+		<div id="div3">
+			This is div3.<br/>
+			It contains some text.<br>
+		</div>
+    </body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<title>Input Control Tags</title>
+
+	<style>
+		body {
+			font-family: verdana;
+		}
+		
+		form {
+			margin-bottom: 30px;
+		}
+
+		form div {
+			margin-bottom: 5px;
+		}
+
+		label {
+			float: left;
+			width: 150px;
+			font-size: 10pt;
+		}
+		
+		input {
+			width: 33%;
+		}
+		
+	</style>
+
+	<script>
+	
+		// Handles form submission for the "date and time" form.
+		function onSubmitDateAndTime() {
+
+			var myDateElem = document.getElementById("myDate");
+			console.log("Date: " + myDateElem.value);
+
+			var myTimeElem = document.getElementById("myTime");
+			console.log("Time: " + myTimeElem.value);
+
+			var myDateTimeElem = document.getElementById("myDateTime");
+			console.log("Date and time: " + myDateTimeElem.value);
+			
+			var myMonthElem = document.getElementById("myMonth");
+			console.log("Month: " + myMonthElem.value);
+
+			var myWeekElem = document.getElementById("myWeek");
+			console.log("Week: " + myWeekElem.value);
+
+			return false;
+		}
+			
+			
+		// Handles form submission for the "date and time" form.
+		function onSubmitMiscellaneous() {
+
+			var myNumberElem = document.getElementById("myNumber");
+			console.log("Ideal Salary: " + myNumberElem.value);
+
+			var myRangeElem = document.getElementById("myRange");
+			console.log("Current happiness: " + myRangeElem.value);
+			
+			var myTelElem = document.getElementById("myTel");
+			console.log("Telephone number: " + myTelElem.value);
+			
+			var myEmailElem = document.getElementById("myEmail");
+			console.log("Email address: " + myEmailElem.value);			
+			
+			var myUrlElem = document.getElementById("myUrl");
+			console.log("URL: " + myUrlElem.value);
+
+			var myColorElem = document.getElementById("myColor");
+			console.log("Color: " + myColorElem.value);
+			
+			var mySearchElem = document.getElementById("mySearch");
+			console.log("Search string: " + mySearchElem.value);
+
+			return false;
+		}
+			
+	</script>
+	
+</head>
+<body>
+
+	<h1>Input Control Tags</h1>
+	
+	<form onsubmit="return onSubmitDateAndTime()">
+
+		<div class="inputpanel">
+			<label>Date:</label>
+			<input type="date" id="myDate" placeholder="Enter a date">  
+		</div>
+
+		<div class="inputpanel">
+			<label>Time:</label>
+			<input type="time" id="myTime" placeholder="Enter a time"> 
+		</div>
+
+		<div class="inputpanel">
+			<label>Date and time:</label>	<!-- Note, there's also a datetime-local input type (no timezone) -->
+			<input type="datetime" id="myDateTime" placeholder="Enter a date and time"> 
+		</div>
+
+		<div class="inputpanel">
+			<label>Month:</label>
+			<input type="month" id="myMonth" placeholder="Enter a month"> 
+		</div>
+
+		<div class="inputpanel">
+			<label>Week:</label>
+			<input type="week" id="myWeek" placeholder="Enter a week"> 
+		</div>
+
+		<button>Submit</button>
+
+	</form>
+		
+	<form onsubmit="return onSubmitMiscellaneous()">
+	
+		<div class="inputpanel">
+			<label>Ideal salary:</label>
+			<input type="number" id="myNumber" min="10000" max="50000" value="25000" step="1000"> 
+		</div>
+
+		<div class="inputpanel">
+			<label>Current happiness:</label>
+			<input type="range" id="myRange" min="1" max="10" value="5"> 
+		</div>
+
+		<div class="inputpanel">
+			<label>Telephone number:</label>
+			<input type="tel" id="myTel" placeholder="Enter a telephone number"> 
+		</div>
+
+		<div class="inputpanel">
+			<label>Email address:</label>
+			<input type="email" id="myEmail" placeholder="Enter an email address"> 
+		</div>
+
+		<div class="inputpanel">
+			<label>Home page URL:</label>
+			<input type="url" id="myUrl" placeholder="Enter a URL"> 
+		</div>
+
+		<div class="inputpanel">
+			<label>Favorite color:</label>
+			<input type="color" id="myColor" placeholder="Choose a color" value="#FF0000"> 
+		</div>
+
+		<div class="inputpanel">
+			<label>Search string:</label>
+			<input type="search" id="mySearch" placeholder="Enter search string" results="3" autosave="mySearch"> 
+		</div>
+
+		<button>Submit</button>
+
+	</form>
+
+</body>
+</html>

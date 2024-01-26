@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Box Shadows</title>
+
+        <style>
+            div {
+                font-family: verdana, arial; 
+                padding: 10px;
+                margin-top: 40px;
+                margin-left: 40px;
+                width: 400px;
+                height: 40px;
+                background-color: yellow;
+                border-radius: 5px;
+            }
+            
+            /* General syntax of box-shadow:
+                box-shadow: horizontal-offset 
+                            vertical-offset
+                            blur-distance
+                            spread-distance
+                            color
+                            inset;
+            */
+            
+            .shadow1 {
+                box-shadow: -10px -10px orange;             /* 10px left, 10px up */
+            }
+            
+            .shadow2 {
+                box-shadow: 10px 10px orange;               /* 10px right, 10px down */
+            }
+            
+            .shadow3 {
+                box-shadow: 10px 10px 20px orange;          /* 10px right, 10px down, 20px blur */
+            }
+            
+            .shadow4 {
+                box-shadow: 10px 10px 20px 10px orange;     /* 10px right, 10px down, 20px blur, 10px spread */
+            }
+            
+            .shadow5 {
+                box-shadow: 10px 10px 20px orange inset;    /* 10px right, 10px down, 20px blur, inset */
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="shadow1">
+            Shadow left/up.<br>
+            box-shadow: -10px -10px orange; 
+        </div>
+        
+        <div class="shadow2">
+            Shadow right/down.<br>
+            box-shadow: 10px 10px orange; 
+        </div>
+        
+        <div class="shadow3">
+            Blurred edges.<br>
+            box-shadow: 10px 10px 20px orange;
+        </div>
+        
+        <div class="shadow4">
+            Spread-out shadow.<br>
+            box-shadow: 10px 10px 20px 10px orange;
+        </div>
+        
+        <div class="shadow5">
+            Inset shadow.<br>
+            box-shadow: 10px 10px 20px orange inset;
+        </div>
+
+    </body>
+</html>

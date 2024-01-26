@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table Text Alignment</title>
+		
+		<style>
+			body {
+				font-family: tahoma;
+			}
+
+			table {
+				width: 50%;
+			}
+			
+			/* 
+			 * For a full set of values for text-align and vertical-align, see:
+			 *   https://developer.mozilla.org/en-US/docs/Web/CSS/text-align
+			 *   https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align
+			 */
+			th {
+				background-color: #b8b4b4;
+				height: 3em;
+				text-align: left;
+				vertical-align: bottom;
+				color: white;
+			}
+			
+			table, th, td {
+				border: 2px solid gray;
+			}		
+
+			th.numeric, td.numeric {
+				text-align: right;
+				width: 20%
+			}
+			
+			table {
+				border-collapse: collapse;
+			}
+			
+		</style>
+    </head>
+
+    <body>
+		<table>
+			<thead>
+				<tr>
+					<th>Country</th>
+					<th>Capital</th>
+					<th class="numeric">Population</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>UK</td>
+					<td>London</td>
+					<td class="numeric">66m</td>
+				</tr>
+				<tr>
+					<td>USA</td>
+					<td>Washington DC</td>
+					<td class="numeric">328m</td>
+				</tr>
+				<tr>
+					<td>Norway</td>
+					<td>Oslo</td>
+					<td class="numeric">5m</td>
+				</tr>
+			</tbody>
+		</table>
+    </body>
+</html>

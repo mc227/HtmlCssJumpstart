@@ -1,0 +1,18 @@
+$fonts: tahoma, consolas, sans-serif;
+$panel-color: orange; 
+
+body {
+	font-family: $fonts;
+}
+
+#wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 200px);    
+	grid-gap: 5px;
+	grid-auto-rows: minmax(100px, auto);			
+
+	div {
+		opacity: 50%;
+		background-color: $panel-color;
+	}
+}

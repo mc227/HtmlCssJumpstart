@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Defining a Transition</title>
+
+        <style>
+            #myPanel {
+                background-color: orangered;
+                width:  200px;
+                height: 100px;
+
+                transition:         width 1s;
+                -ms-transition:     width 1s;
+                -webkit-transition: width 1s;
+                -moz-transition:    width 1s;
+                -o-transition:      width 1s;
+            }
+
+            #myPanel:hover {
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="myPanel"></div>
+    </body>
+</html>

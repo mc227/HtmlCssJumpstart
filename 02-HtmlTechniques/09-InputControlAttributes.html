@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<title>Input Control Attributes</title>
+
+	<style>
+		body {
+			font-family: verdana;
+		}
+		
+		form div {
+			margin-bottom: 5px;
+		}
+		
+		label {
+			float: left;
+			width: 150px;
+			font-size: 10pt;
+		}
+		
+		input {
+			border: solid 1px;
+		}
+		
+		input:valid {
+			border-color: lightblue;
+		}
+		
+		input:invalid {
+			border-color: pink;
+			color: red;
+			background-color: #fce6f4;
+		}
+		
+	</style>
+
+	<script>
+		function onSubmit() {
+			
+			var myNameElem = document.getElementById("name");
+			console.log("Name: " + myNameElem.value);
+			
+			var myHouseNumberElem = document.getElementById("houseNumber");
+			console.log("House number: " + myHouseNumberElem.value);
+			
+			var myPostCodeElem = document.getElementById("postCode");
+			console.log("Post code: " + myPostCodeElem.value);
+
+			var myBirthCountryElem = document.getElementById("birthCountry");
+			console.log("Birth country: " + myBirthCountryElem.value);
+
+			var myResidenceCountryElem = document.getElementById("residenceCountry");
+			console.log("Residence country: " + myResidenceCountryElem.value);
+
+			var picsElem = document.getElementById("pics");
+			for (var pic of picsElem.files) {
+				console.log("Pic name: " + pic.name + " [" + pic.size + " bytes]");
+			}
+			return false;
+		}
+	</script>
+	
+</head>
+<body>
+
+	<h1>Input Control Attributes</h1>
+	
+	<form action="" onsubmit="return onSubmit()">
+
+		<div class="inputpanel">
+			<label>Name:</label>
+			<input type="text" id="name" autofocus autocomplete="off" placeholder="Enter your name" required="true" size="30">
+		</div>
+		
+		<div class="inputpanel">
+			<label>House Number:</label>
+			<input type="text" id="houseNumber" placeholder="Enter your house number" required="true" size="30">
+		</div>
+
+		<div class="inputpanel">
+			<label>UK post code:</label>
+			<input type="text" id="postCode" pattern="[a-zA-Z]{1,2}\d{1,2}\s\d[a-zA-Z]{2}" placeholder="Enter a UK post code" size="30">
+		</div>
+
+		<div class="inputpanel">
+			<label>Country of birth:</label>
+			<input list="countries" id="birthCountry" placeholder="Select country of birth" size="30">
+		</div>
+		
+		<div class="inputpanel">
+			<label>Country of residence:</label>
+			<input list="countries" id="residenceCountry" placeholder="Select country of residence" size="30">
+		</div>
+		
+		<div class="inputpanel">
+			<label>Pics:</label>
+			<input type="file" id="pics" multiple>
+		</div>
+			
+		<input type="submit" value="Submit">
+
+	</form>
+	
+	<datalist id="countries">
+		<option value="England">
+		<option value="Scotland">
+		<option value="Wales">
+		<option value="NI">
+	</datalist>
+
+</body>
+</html>

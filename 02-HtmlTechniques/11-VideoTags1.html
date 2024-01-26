@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Tags - Example 1</title>
+	<style>
+		body { 
+			font-family: verdana; 
+		}
+		
+		.videobox {
+			width: 200px;
+			float: left;
+		}
+		
+		video {
+			width: 180px;
+			height: 135px;
+			margin-top: 10px;
+			border: 5px solid orange;
+			border-radius: 5px;
+			box-shadow: 7px 7px 5px gray; 
+		}
+		
+		.videobox:hover {
+			width: 320px;
+		}
+		
+		video:hover {
+			width: 300px;
+			height: 225px;
+		}
+		
+	</style>
+	
+</head>
+<body>
+	<h1>This page plays videos...</h1>
+	
+	<div class="videobox">
+		Play .mov file<br/>
+		<video src="videos/SwanseaBay.mov" poster="ImageLoading.png" autoplay loop controls></video>
+	</div>
+
+	<div class="videobox">
+		Play .mp4 file<br/>
+		<video src="videos/SwanseaBay.mp4" poster="ImageLoading.png" controls></video>
+	</div>
+
+	<div class="videobox">
+		Play .webm file<br/>
+		<video src="videos/SwanseaBay.webm" poster="ImageLoading.png" controls></video>
+	</div>
+
+	<div class="videobox">
+		Play .ogv file<br/>
+		<video src="videos/SwanseaBay.ogv" poster="ImageLoading.png" controls></video>
+	</div>
+
+</body>
+</html>

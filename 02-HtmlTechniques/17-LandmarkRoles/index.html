@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Landmark Roles</title>
+	<link rel="stylesheet" type="text/css" href="Stylesheet.css">
+</head>
+
+<body>
+
+	<header>
+		<h1 role="banner">Landmark Roles</h1>
+		<h2>Looks nice with CSS</h2>
+		<h4>Nice eh?</h4>
+	</header>
+
+    <div id="MyMainContainer">
+
+        <nav role="navigation"> 
+			<a href="http://www.oreilly.com/">O'Reilly</a>
+			<a href="http://www.olsensoft.com">Olsen Software</a>
+			<a href="http://www.google.com">Google</a>
+        </nav>
+
+        <section>
+        
+			<article role="article">
+                <div>
+				   This example shows how to use Aria landmark roles.
+				   Landmark roles identify common Web page sections in a consistent way, and
+				   allow assistive technologies to provide users with features they can use to identify and navigate to sections of page content.
+				</div>
+				<aside role="complementary">
+					<h3>By the way...</h3>
+					<div>It's the "role" tag that identifies a landmark role.</div>
+				</aside>
+				<figure id="theFigure">
+					<img src="HTML5_Badge_512.png" alt="HTML5 rocks!">
+					<img src="HTML5_sticker.png"   alt="Future of the web!">
+					<figcaption>HTML5 is cool baby!</figcaption>
+				</figure>
+			</article>
+			
+			<article role="article">
+                <header>
+                    <h1>New Features in HTML5...</h1>
+                </header>
+                <ul>
+					<li>Canvas and SVG graphics</li>
+					<li>Channel messaging</li>
+					<li>Cross-document messaging</li>
+					<li>Geolocation</li>
+					<li>MathML</li>
+					<li>Microdata</li>
+					<li>Server-Sent events</li>
+					<li>WebSocket API and protocol</li>
+					<li>Web origin concept</li>
+					<li>Web storage</li>
+					<li>Web SQL database</li>
+					<li>Web Workers</li>
+					<li>XMLHttpRequest Level 2</li>
+				</ul>
+            </article>
+        </section>
+		
+		<footer>
+            <small role="contentinfo">Thanks for visiting! Feel free to contact us with any suggestions.</small>
+        </footer>    </div>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html >
+<html>
+<head>
+    <title>Data Attributes</title>
+
+	<style>
+		body { 
+			font-family: verdana; 
+		}
+		
+		.inputPanel {
+			margin-bottom: 5px;			
+		}
+
+		label {
+			width: 130px;
+			float: left;
+		}
+		
+		span.error {
+			color: red;
+		}
+		
+		button {
+			background-color: steelblue;
+			color: white;
+			font-weight: bold;
+			width: 70px;
+			height: 30px;
+		}		
+		
+		#messageArea {
+			font-size: larger;
+			color: white;
+			padding: 10px 5px;
+		}
+
+		#messageArea.error {
+			background-color: red;
+		}
+
+		#messageArea.ok {
+			background-color: green;
+		}
+		
+	</style>
+		
+	<script>
+
+		function validate() {
+		
+			var anyErrors = false;
+
+			var inputElems = document.getElementsByTagName("input");
+			for (var elem of inputElems) {
+				var errorElem = document.querySelector("#" + elem.id + " + .error");
+				if (elem.dataset && elem.dataset.format && !elem.value.match(elem.dataset.format)) {
+					errorElem.innerHTML = elem.dataset.errorMessage;
+					anyErrors = true;
+				}
+				else {
+					errorElem.innerHTML = "";
+				}
+
+			}
+			var messageAreaElem = document.getElementById("messageArea");
+			
+			if (anyErrors) {
+				messageAreaElem.innerHTML = "Form contains errors";
+				messageAreaElem.classList = "error";
+			}
+			else {
+				messageAreaElem.innerHTML = "Form is ok";
+				messageAreaElem.classList = "ok";
+			}
+
+			return false;
+		}
+		
+    </script>
+</head>
+<body>
+	<h1>Data attributes</h1>
+	
+	<form action="" onsubmit="return validate()">
+	
+		<div class="inputPanel">
+			<label for="nameText">Name: </label>	
+			<input id="nameText" type="text" size="25" 
+				data-format="[A-Za-z]+\s[A-Za-z]+"
+				data-error-message="You must enter your first name and last name">
+			<span class="error"></span>
+		</div>
+
+		<div class="inputPanel">
+			<label for="emailText">E-mail: </label>	
+			<input id="emailText" type="text" size="25" 
+				data-format="\w+@[\w.]+([.][A-Za-z]{2,})$"
+				data-error-message="You must enter a valid e-mail address">
+				<span class="error"></span>
+			</div>
+
+		<div class="inputPanel">
+			<label for="homeTelText">Home tel: </label>	
+			<input id="homeTelText" type="text" size="25">
+			<span class="error"></span>
+		</div>
+
+		<div class="inputPanel">
+			<label for="workTelText">Work tel: </label>	
+			<input id="workTelText" type="text" size="25">
+			<span class="error"></span>
+		</div>
+
+		<div class="inputPanel">
+			<button>Submit</button> 
+		</div>
+	</form>
+	
+	<div id="messageArea"></div>
+	
+</body>
+</html>

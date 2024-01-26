@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multi-Row Header</title>
+
+        <style>
+            body {
+                font-family: Verdana;
+            }
+
+            table {
+                width: 33%;
+                background-color: lightgrey;
+                border-spacing: 0px;
+            }
+
+            caption {
+                font-weight: bold;
+                margin-bottom: 5px;
+                color: white;
+                background-color: #2e446e;
+                padding: 0.33em 0em;
+            }
+
+            thead, tfoot {
+                background-color: #85a1ff;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Multi-Row Header</h1>
+        <table>
+            <caption>Shopping Cart</caption>
+            <thead>
+                <tr>
+                    <td>Item</td><td>Net Price</td><td>Sales Tax</td><td>Total Price</td>
+                </tr>
+                <tr>
+                    <td></td><td>GBP</td><td>GBP</td><td>GBP</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Carving skis</td><td>500</td><td>100</td><td>600</td>
+                </tr>
+                <tr>
+                    <td>Ski boots</td><td>200</td><td>40</td><td>240</td>
+                </tr>
+                <tr>
+                    <td>Helmet</td><td>50</td><td>10</td><td>60</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Totals</td><td>750</td><td>150</td><td>900</td>
+                </tr>
+            </tfoot>
+    </body>
+</html>

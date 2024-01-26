@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rounded Corners</title>
+
+        <style>
+            div {
+                font-family: verdana, arial; 
+                padding: 20px;
+                margin-bottom: 30px;
+                width: 400px;
+                height: 50px;
+                background-color: orange;
+            }
+            
+            .border1 {
+                border-radius: 20px;	
+            }
+            
+            .border2 {
+                /* top-left top-right bottom-right bottom-left */
+                border-radius: 10px 50px 10px 0px;	
+            }
+            
+            .border3 {
+                border-top-left-radius: 10px;
+                border-top-right-radius: 50px;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 0px;
+            }
+
+            .border4 {
+                /* x y */
+                border-radius: 40px / 10px;
+            }
+
+            .border5 {
+                border-radius: 20px 20px 50px 50px / 
+                               10px 10px 50px 50px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="border1">
+            Same border on all corners.<br/>
+            border-radius: 20px;	
+        </div>
+
+        <div class="border2">
+            Different border on each corner.<br/>
+            border-radius: tl tr br bl;	
+        </div>
+        
+        <div class="border3">
+            Different border on each corner, set individually.<br/>
+            border-top-left-radius: 5px;    etc.
+        </div>
+
+        <div class="border4">
+            Same elliptical border on all corners.<br/>
+            border-radius: x / y;
+        </div>
+
+        <div class="border5">
+            Different elliptical border on each corner.<br/>
+            border-radius: ulx urx lrx llx / uly ury lry lly;
+        </div>
+    </body>
+</html>

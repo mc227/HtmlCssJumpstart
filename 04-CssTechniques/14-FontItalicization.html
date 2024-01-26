@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Font Italicization</title>
+		
+		<style>
+			body {
+				font-family: times new roman;
+				font-size: 2em;
+			}
+			
+			div {
+			    margin-bottom: 1em;
+			}
+			
+		    #div1 {
+				/* No font-style specified, inherits parent's font-style */
+			}
+
+		    #div2 {
+				font-style: normal;
+			}
+			
+		    #div3 {
+				font-style: italic;
+			}
+
+		    #div4 {
+			    font-style: oblique;
+			}
+
+		    #div5 {
+			    font-style: oblique 60deg;
+			}
+
+		</style>
+    </head>
+
+    <body>
+		<div id="div1">This is div1</div>
+		<div id="div2">This is div2</div>
+		<div id="div3">This is div3</div>
+		<div id="div4">This is div4</div>
+		<div id="div5">This is div5</div>
+    </body>
+</html>

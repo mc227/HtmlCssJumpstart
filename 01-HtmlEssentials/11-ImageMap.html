@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Click Maps</title>
+
+        <style>
+            body {
+                font-family: Verdana;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Image Click Maps</h1>
+        
+        <img src="images/Kitzbuhel.jpg" alt="Kitzb&uuml;hel" usemap="#mymap" width="500" height="300">
+        
+        <map name="mymap">
+            <area shape="rect"   coords="0,0,249,149" alt="Top left" href="resources/page1.html">
+            <area shape="rect"   coords="250,0,499,149" alt="Top right" href="resources/page2.html">
+            <area shape="circle" coords="125,225,50" alt="Bottom left" href="resources/page3.html">
+            <area shape="poly"   coords="375,150,499,225,375,299,250,225"  alt="Bottom right" href="resources/page4.html">
+        </map>
+        
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Child Pseudo-Elements</title>
+
+		<style>
+			
+			body {
+				font-family: tahoma;
+			}
+
+			li:first-child {
+				color: red;
+			}	 
+			
+			li:last-child {
+				color: purple;
+			}	 
+
+			li:nth-child(2) {
+				color: orange;
+			}	 
+
+			li:nth-last-child(2) {
+				color: blue;
+			}	 
+			
+			li:only-child {
+				background-color: pink;
+				color: green;
+			}	 
+		</style>
+		
+	</head>
+
+	<body>
+
+		Spanish islands:
+		<ul>
+			<li>Majorca</li>
+			<li>Menorca</li>
+			<li>Ibiza</li>
+			<li>Tenerife</li>
+			<li>Gran Canaria</li>
+			<li>Lanzarote</li>
+		</ul>
+
+		Nordic countries:
+		<ul>
+			<li>Norway</li>
+			<li>Sweden</li>
+			<li>Denmark</li>
+			<li>Finland</li>
+		</ul>
+
+		Welsh-speaking countries:
+		<ul>
+			<li>Wales :-)</li>
+		</ul>
+		
+	</body>
+</html>

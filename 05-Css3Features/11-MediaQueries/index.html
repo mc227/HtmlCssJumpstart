@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Media Queries Example</title>
+	
+	<!-- You can use media queries to specify which stylesheet to apply in different circumstances.   -->
+	<!-- Common media types are "screen", "print", "all", "braille", "handheld", "projection", "tty". -->
+	<!-- You can also define more complex media expressions, such as media="screen and (color)".      -->
+	<link rel="stylesheet" type="text/css" media="screen" href="ScreenStylesheet.css">
+	<link rel="stylesheet" type="text/css" media="print"  href="PrintStylesheet.css">
+
+</head>
+
+<body>
+
+	<header>
+		<h1>Media Queries Example</h1>
+	</header>
+
+    <div id="MyMainContainer">
+
+        <nav>
+			<a href="http://www.oreilly.com/">O'Reilly</a>
+			<a href="http://www.olsensoft.com">Olsen Software</a>
+			<a href="http://www.google.com">Google</a>
+        </nav>
+
+        <section>
+        
+			<article>
+                <div>
+				   This example shows how to use HTML5 semantic markup tags, such as section, article, header, and footer. 
+                   This page looks much better if you link it to the stylesheet!
+				</div>
+				<aside>
+					<h3>By the way...</h3>
+					<div>HTML5 also lets you use regular HTML tags such as h1, h2, h3, p, div, etc. The world is your oyster.</div>
+				</aside>
+				<figure id="theFigure">
+					<img src="HTML5_Badge_512.png" alt="HTML5 rocks!">
+					<img src="HTML5_sticker.png"   alt="Future of the web!">
+					<figcaption>HTML5 is cool baby!</figcaption>
+				</figure>
+			</article>
+            
+        </section>
+		
+        <footer>
+            <small>&copy; Copyright example.com</small>
+        </footer>
+    </div>
+
+</body>
+</html>

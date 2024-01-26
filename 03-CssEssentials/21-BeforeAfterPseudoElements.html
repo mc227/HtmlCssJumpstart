@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Before and After Pseudo-Elements</title>
+
+		<style>
+			
+			body {
+				font-family: verdana;
+			}
+
+			/* You can reset a counter using counter-reset: counterName, optionalValue */
+			h1 {
+				counter-reset: p-number;
+			}
+
+			/* You can increment a counter using counter-increment: counterName, optionalAmount */
+			p {
+				counter-increment: p-number;
+			}
+
+			/* You can display a counter using counter(aCounter, aListStyle) */
+			/* For details of list styles, see https://developer.mozilla.org/en-US/docs/Web/CSS/list-style */
+			p::before {
+				content: "Paragraph " counter(p-number, upper-roman) ". ";
+				display: block;
+				color: orange;
+				font-weight: bold;
+			}
+
+			p::after {
+				content: url(CloseTriangle.jpg);
+			}	 
+
+		</style>
+		
+	</head>
+
+	<body>
+
+		<h1>Interesting stuff</h1>
+		<p>
+		Swansea (Welsh: Abertawe) is a coastal city and county, 
+		officially known as the City and County of Swansea (Welsh: Dinas a Sir Abertawe) in Wales.
+		</p>
+		
+		<p>
+		If you look carefully you'll see this paragraph is almost the same as the first one. 
+		Swansea (Welsh: Abertawe) is a coastal city and county, 
+		officially known as the City and County of Swansea (Welsh: Dinas a Sir Abertawe) in Wales.
+		</p>
+
+		<h1>It's still interesting stuff</h1>
+		<p>
+		Swansea (Welsh: Abertawe) is a coastal city and county, 
+		officially known as the City and County of Swansea (Welsh: Dinas a Sir Abertawe) in Wales.
+		</p>
+		
+		<p>
+		If you look carefully you'll see this paragraph is almost the same as the first one. 
+		Swansea (Welsh: Abertawe) is a coastal city and county, 
+		officially known as the City and County of Swansea (Welsh: Dinas a Sir Abertawe) in Wales.
+		</p>
+
+	</body>
+</html>

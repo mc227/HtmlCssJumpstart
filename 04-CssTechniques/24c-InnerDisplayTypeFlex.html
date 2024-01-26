@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inner Display Type - Flex</title>
+		
+		<style>
+			body {
+				font-family: tahoma;
+			}
+
+			/* 
+			 * Flex layout places elements in 1 dimension (up/down or left/right). For details, see:
+			 * https://developer.mozilla.org/en-US/docs/Web/CSS/flex
+			 */
+			
+			#wrapper {
+				display: flex;
+				flex-wrap: wrap;        /* wrap, nowrap, wrap-reverse */  
+                flex-direction: row;    /* row, row-reverse, column, column-reverse */
+			}
+
+			#wrapper > * {
+				flex-grow: 1;			
+				flex-shrink: 1;
+                flex-basis: 200px;      /* (width), content  */ 			
+
+				opacity: 50%;
+				background-color: orange;
+                margin: 3px;
+			 }
+
+		</style>
+    </head>
+
+    <body>
+
+		<div id="wrapper">
+			<div id="div1">div1</div>
+			<div id="div2">div2</div>
+			<div id="div3">div3 has some interesting content, I wonder what it looks like...</div>
+			<div id="div4">div4</div>
+			<div id="div5">div5</div>
+			<div id="div6">div6</div>
+		</div>	
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Background Image Attachment</title>
+		
+		<style>
+			/* 
+			 * background-attachment tells the browser whether or not to scroll the image.
+			 * Attachment styles are fixed, scroll, local.
+			 * See https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment
+			 */
+			 
+			body {
+				font-family: tahoma;
+			}
+
+			div {
+				margin-bottom: 10em;
+			}			
+
+			#maindiv {
+				height: 300px;
+				overflow: scroll;
+				background-image: url("Wales.png");
+				background-attachment: local;				
+			}
+			
+		    #div1 {
+			    background-color: #fc7276
+			}
+			
+		    #div2 {
+			    background-color: rgb(252,186,3)
+			}
+			
+			#div3 {
+			    background-color: lightgreen
+			}
+			
+		</style>
+    </head>
+
+    <body>
+		<div id="maindiv">
+			<div id="div1">
+				This is div1.<br>
+				It contains some text.<br>
+			</div>
+			
+			<div id="div2">
+				This is div2.<br/>
+				It contains some text.<br>
+			</div>
+
+			<div id="div3">
+				This is div3.<br/>
+				It contains some text.<br>
+			</div>
+		</div>
+
+		<div>
+			<div>
+				This is another div.<br>
+				It contains some text.<br>
+			</div>
+			
+			<div>
+				This is another div.<br>
+				It contains some text.<br>
+			</div>
+
+			<div>
+				This is another div.<br>
+				It contains some text.<br>
+			</div>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html >
+<html>
+<head>
+    <title>Scripting Audio</title>
+
+	<style>
+		body { 
+			font-family: verdana; 
+		}
+		
+		button {
+			background-color: steelblue;
+			color: white;
+			font-weight: bold;
+			width: 100px;
+			height: 30px;
+		}
+	</style>
+		
+    <script type="text/javascript">
+
+		// Global variables.
+		var index;
+		var numClips;
+        var audio;
+
+		// Play a clip.
+        function doPlay() {
+			if (index == numClips) {
+				index = 0;
+			}
+			
+			audio.src = "audios/" + index + ".mp3";
+            index++;
+			audio.play();
+		}
+
+        // Pause the current audio clip.
+        function doPause() {
+            audio.pause();
+        }
+		
+		// Perform page initialization.
+		function onLoad() {
+		
+			index = 0;
+			numClips = 11;
+			
+			// Create a new audio element.
+			audio = document.createElement("audio");
+
+			// When a clip has ended, play the next one.
+			audio.addEventListener("ended", function() { doPlay(); });
+		}
+
+		window.addEventListener("load", onLoad);
+		
+    </script>
+</head>
+<body>
+	<h1>Scripting audio example</h1>
+	
+	<button onclick="doPlay()">Play</button> &nbsp;
+	<button onclick="doPause()">Pause</button>
+	
+</body>
+</html>

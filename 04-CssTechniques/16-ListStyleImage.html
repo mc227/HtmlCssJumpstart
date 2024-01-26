@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List Style Image</title>
+		
+		<style>
+			body {
+				font-family: tahoma;
+				font-size: 2em;
+			}
+			
+			/* Set the list-style-item, and define padding on the left to allow space for image */ 
+		    #list1 {
+				list-style-image: url("Wales.png");
+				padding-left: 100px;
+			}
+			
+			/* Alternative approach - disable list style completely, and set the background image for list items. */
+			/* This approach makes it easier to vertically align list items within the designated line height.    */
+		    #list2 {
+				list-style-type: none;
+				padding-left: 0px;
+			}
+		    #list2 li {
+				background-image: url("Wales.png");
+				background-repeat: no-repeat;
+				line-height: 60px;
+				padding-left: 100px;
+			}
+
+		</style>
+    </head>
+
+    <body>
+		<h4>List 1</h4>
+		<ol id="list1">
+			<li>Matt</li>
+			<li>Mark</li>
+			<li>Luke</li>
+			<li>John</li>
+		</ol>
+
+		<h4>List 2</h4>
+		<ol id="list2">
+			<li>Matt</li>
+			<li>Mark</li>
+			<li>Luke</li>
+			<li>John</li>
+		</ol>
+    </body>
+</html>

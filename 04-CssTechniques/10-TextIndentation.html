@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Text Alignment</title>
+		
+		<style>
+			body {
+				font-family: tahoma;
+				font-size: 2em;
+			}
+			
+			div {
+			    margin-bottom: 1em;
+			}
+			
+		    #div1 {
+			    text-indent: 1cm;   /* Absolute measurements are problematic across different devices */  
+			}
+			
+		    #div2 {
+			    text-indent: 72pt;	 /* 1pt = 1/72 inch */
+			}
+
+		    #div3 {
+			    font-size: 100pt;
+			    text-indent: 1em;    /* 1em = height of font of current element, on current device */  
+			}
+
+		    #div4 {
+			    text-indent: 1rem;   /* 1rem = height of font of root element, on current device */  
+			}
+
+		    #div5 {
+			    text-indent: 175px;  /* 1px = thinnest line width that can be drawn clearly, on current device */ 
+			}
+		</style>
+    </head>
+
+    <body>
+		<div id="div1">This is div1</div>
+		<div id="div2">This is div2</div>
+		<div id="div3">This is div3</div>
+		<div id="div4">This is div4</div>
+		<div id="div5">This is div5</div>
+    </body>
+</html>

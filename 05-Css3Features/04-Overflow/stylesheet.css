@@ -1,0 +1,64 @@
+body {
+	font-family: arial, verdana, sans-serif;
+	font-size: smaller;
+	color: white;
+}
+
+h3 {
+	background-color: white;
+	color: #06b0f6;
+}
+
+.thumbnailImage {
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin-right: 2px;
+}
+
+.largeImage {
+	width: 520px;
+	height: 520px;
+}
+
+#containerPanel, #helpPanel {
+	box-shadow: 5px 5px 5px gray;         /* Define box shadow on panels */
+}
+
+#containerPanel {
+	margin-left: auto;                      /* Choose left margin for centralization */							
+	margin-right: auto;						/* Choose right margin for centralization */
+	background-color: lightblue;
+	width: 520px;
+	height: 520px;
+	position: relative;						/* Set this as a "positioned" element, relative to itself */
+											/* If we set top/right/bottom/left, the element would be offset that amount */
+
+	overflow: hidden;						/* Content that overflows this box will be hidden */
+}
+
+#thumbnailsPanel {
+	list-style-type: none;
+	position: absolute;						/* Position at absolute location (within closest positioned ancestor, i.e. containerPanel) */ 
+	bottom: 0px;							/* With absolute positioning, you specify the location, e.g. top, left, bottom (or height), right (or width) */ 
+	width: 1240px;      
+	height: 50px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#helpPanel {
+	background-color: #06b0f6;
+	border: thin solid darkblue;
+	display: none;                          /* Not dispayed initially */
+	position: absolute;						/* Position at absolute location (within closest positioned ancestor, i.e. containerPanel) */ 
+	top: 5%;								/* With absolute positioning, you specify the location, e.g. top, left, bottom (or height), right (or width) */ 
+	left: 25%;
+	width: 350px;
+	height: 200px;
+}
+
+#helpPanel p, #helpPanel span, #helpPanel button  {
+	margin-left: 10px;
+	white-space: nowrap;					/* Suppress text wrapping (line breaks), this is needed to prevent wrapping during resizing of box */ 
+}
